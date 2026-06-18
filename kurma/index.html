@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Onemorebitee.id</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans">
+
+    <nav class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="max-w-6xl mx-auto px-4 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-black text-primary tracking-wider">OBM.<span class="text-secondary">ID</span></a>
+            <div class="relative">
+                <button onclick="toggleCart()" class="bg-secondary text-white px-4 py-2 rounded-full text-sm font-semibold flex items-center gap-2 hover:bg-opacity-90 transition">
+                    🛒 Keranjang (<span id="cart-count">0</span>)
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <header class="bg-yellow-50 py-16 px-4 text-center">
+        <div class="max-w-3xl mx-auto">
+            <span class="bg-yellow-200 text-yellow-800 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">Onemorebitee.id</span>
+            <h1 class="text-4xl md:text-5xl font-extrabold text-secondary mt-4 mb-6 leading-tight">
+                Rasa Klasik, <br><span class="text-primary">Sentuhan Modern.</span>
+            </h1>
+            <p class="text-gray-600 text-lg mb-8">Dibuat dengan bahan premium, mie kenyal, dan bumbu rahasia yang bikin nagih. Pesan sekarang, siap antar!</p>
+            <a href="#menu" class="bg-primary text-white px-8 py-3 rounded-lg font-bold shadow-lg hover:bg-opacity-90 transition">Lihat Menu</a>
+        </div>
+    </header>
+
+    <main id="menu" class="max-w-6xl mx-auto px-4 py-16">
+        <h2 class="text-3xl font-bold text-center text-secondary mb-12">Pilihan Menu Favorit</h2>
+        
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="card-menu bg-white rounded-2xl shadow-sm overflow-hidden border border-gray-100 transition">
+                <img src="WhatsApp Image 2026-06-19 at 03.56.45.jpeg" alt="Mie Ayam Original" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <h3 class="text-xl font-bold text-secondary mb-2">Mie Ayam Original</h3>
+                    <p class="text-gray-500 text-sm mb-4">Mie kenyal dengan taburan ayam cincang gurih, sawi segar, dan kuah kaldu hangat.</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-lg font-black text-secondary">Rp 12.000</span>
+                        <button onclick="addToCart('Mie Ayam Original', 12000)" class="bg-primary text-white px-4 py-2 rounded-lg text-sm font-semibold hover:bg-opacity-90 transition">+ Tambah</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card-menu bg-white rounded-2xl shadow-sm overflow-hidden border border-gray-100 transition">
+                <img src="WhatsApp Image 2026-06-19 at 03.56.45.jpeg" alt="Mie Ayam Bakso" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <h3 class="text-xl font-bold text-secondary mb-2">Mie Ayam Bakso</h3>
+                    <p class="text-gray-500 text-sm mb-4">Mie Ayam Original ditambah bakso.</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-lg font-black text-secondary">Rp 15.000</span>
+                        <button onclick="addToCart('Mie Ayam Bakso', 15000)" class="bg-primary text-white px-4 py-2 rounded-lg text-sm font-semibold hover:bg-opacity-90 transition">+ Tambah</button>
+                    </div>
+            </div>
+            </div>
+                <div class="card-menu bg-white rounded-2xl shadow-sm overflow-hidden border border-gray-100 transition">
+                <img src="WhatsApp Image 2026-06-19 at 03.56.45.jpeg" alt="Mie Ayam Pangsit" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <h3 class="text-xl font-bold text-secondary mb-2">Mie Ayam Pangsit</h3>
+                    <p class="text-gray-500 text-sm mb-4">Mie Ayam Original ditambah Pangsit.</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-lg font-black text-secondary">Rp 15.000</span>
+                        <button onclick="addToCart('Mie Ayam Pangsit', 15000)" class="bg-primary text-white px-4 py-2 rounded-lg text-sm font-semibold hover:bg-opacity-90 transition">+ Tambah</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card-menu bg-white rounded-2xl shadow-sm overflow-hidden border border-gray-100 transition">
+                <img src="WhatsApp Image 2026-06-19 at 03.56.45.jpeg" alt="Mie Ayam Ceker" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <h3 class="text-xl font-bold text-secondary mb-2">Mie Ayam Ceker</h3>
+                    <p class="text-gray-500 text-sm mb-4">Makin lengkap dengan tambahan ceker.</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-lg font-black text-secondary">Rp 15.000</span>
+                        <button onclick="addToCart('Mie Ayam ceker', 15000)" class="bg-primary text-white px-4 py-2 rounded-lg text-sm font-semibold hover:bg-opacity-90 transition">+ Tambah</button>
+                    </div>
+                </div>
+            </div>
+            <div class="card-menu bg-white rounded-2xl shadow-sm overflow-hidden border border-gray-100 transition">
+                <img src="WhatsApp Image 2026-06-19 at 03.56.45.jpeg" alt="Mie Ayam Komplit" class="w-full h-48 object-cover">
+                <div class="p-6">
+                    <h3 class="text-xl font-bold text-secondary mb-2">Mie Ayam Komplit</h3>
+                    <p class="text-gray-500 text-sm mb-4">Mie Ayam Original ditambah bakso, ceker, pangsit.</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-lg font-black text-secondary">Rp 20.000</span>
+                        <button onclick="addToCart('Mie Ayam Bakso', 20000)" class="bg-primary text-white px-4 py-2 rounded-lg text-sm font-semibold hover:bg-opacity-90 transition">+ Tambah</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <div id="cart-sidebar" class="fixed inset-y-0 right-0 w-full max-w-md bg-white shadow-2xl z-50 transform translate-x-full transition-transform duration-300 flex flex-col">
+        <div class="p-6 border-b flex justify-between items-center">
+            <h2 class="text-xl font-bold text-secondary">Keranjang Belanja</h2>
+            <button onclick="toggleCart()" class="text-gray-500 hover:text-black font-semibold text-lg">✕</button>
+        </div>
+        
+        <div id="cart-items" class="p-6 flex-1 overflow-y-auto space-y-4">
+            <p class="text-gray-500 text-center py-8">Keranjang masih kosong.</p>
+        </div>
+
+        <div class="p-6 border-t bg-gray-50 space-y-4">
+            <div class="flex justify-between font-bold text-lg text-secondary">
+                <span>Total Belanja:</span>
+                <span id="cart-total">Rp 0</span>
+            </div>
+
+            <div class="space-y-2">
+                <label class="block text-xs font-bold text-gray-600 uppercase">Nama Penerima</label>
+                <input type="text" id="cust-name" class="w-full p-2 border rounded-lg text-sm input-custom" placeholder="Contoh: Raya">
+                
+                <label class="block text-xs font-bold text-gray-600 uppercase mt-2">Alamat Pengiriman</label>
+                <textarea id="cust-address" class="w-full p-2 border rounded-lg text-sm input-custom" rows="2" placeholder="Alamat lengkap & nomor rumah..."></textarea>
+                
+                <label class="block text-xs font-bold text-gray-600 uppercase mt-2">Metode Pembayaran</label>
+                <select id="payment-method" onchange="handlePaymentChange()" class="w-full p-2 border rounded-lg text-sm bg-white input-custom">
+                    <option value="qris">QRIS (Otomatis / E-Wallet)</option>
+                    <option value="transfer">Transfer Bank (Manual)</option>
+                    <option value="cod">Bayar di Tempat (COD)</option>
+                </select>
+            </div>
+
+            <div id="payment-instruction" class="p-3 bg-yellow-100 text-xs rounded-lg text-yellow-900">
+                <strong>Info QRIS:</strong> Gambar QRIS DANA akan muncul setelah menekan tombol di bawah. Silakan scan/screenshot untuk membayar, lalu sistem akan meneruskan rincian ke WhatsApp toko.
+            </div>
+
+            <button onclick="checkout()" class="w-full bg-primary text-white py-3 rounded-lg font-bold shadow-md hover:bg-opacity-90 transition">
+                Konfirmasi & Kirim via WhatsApp
+            </button>
+        </div>
+    </div>
+
+    <div id="payment-modal" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden flex items-center justify-center p-4">
+        <div class="bg-white p-6 rounded-2xl max-w-sm w-full text-center space-y-4 shadow-xl">
+            <h3 class="text-xl font-bold text-secondary" id="modal-title">Pembayaran</h3>
+            <div id="modal-content" class="flex flex-col items-center py-2">
+                </div>
+            <button onclick="redirectToWhatsApp()" class="w-full bg-primary text-white py-3 rounded-lg font-bold hover:bg-opacity-90 transition flex items-center justify-center gap-2">
+                🟢 Lanjut ke WhatsApp Toko
+            </button>
+            <button onclick="closeModal()" class="w-full bg-gray-200 text-gray-700 py-2 rounded-lg font-semibold text-sm">Batal</button>
+        </div>
+    </div>
+
+    <footer class="bg-secondary text-gray-400 text-center py-8 text-sm border-t border-gray-800">
+        <p>&copy; 2026 faaris_1 dev. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

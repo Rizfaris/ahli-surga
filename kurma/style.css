@@ -1,0 +1,38 @@
+/* Konfigurasi Palet Warna & Variabel */
+:root {
+    --primary-color: #ff5722;   /* Warna Oranye Khas Makanan */
+    --secondary-color: #232323; /* Warna Hitam Modern */
+}
+
+/* Pewarnaan Teks & Background Custom */
+.text-primary {
+    color: var(--primary-color);
+}
+.text-secondary {
+    color: var(--secondary-color);
+}
+.bg-primary {
+    background-color: var(--primary-color);
+}
+.bg-secondary {
+    background-color: var(--secondary-color);
+}
+
+/* Efek Hover Pada Card Menu */
+.card-menu:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+/* Fokus Outline Pada Form Input */
+.input-custom:focus {
+    outline: 2px solid var(--primary-color);
+    border-color: transparent;
+}
+
+/* Ukuran Maksimal Gambar QRIS */
+.qr-container img {
+    max-width: 180px;
+    height: auto;
+    border-radius: 8px;
+}
