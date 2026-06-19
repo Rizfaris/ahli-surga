@@ -3,7 +3,7 @@
 // =========================================================================
 
 // 1. Masukkan nomor WhatsApp Anda (Gunakan kode negara 62 di depan, TANPA tanda + atau spasi)
-const NOMOR_WHATSAPP = '6283804073445'; 
+const NOMOR_WHATSAPP = '6281341683993'; 
 
 // 2. Masukkan link foto/gambar QRIS DANA Anda di sini (Upload foto QRIS Anda ke postimages.org atau sejenisnya)
 const FOTO_QRIS = 'QRIS.jpg';
