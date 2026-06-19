@@ -1,6 +1,6 @@
 /* Konfigurasi Palet Warna & Variabel */
 :root {
-    --primary-color: #ff5722;   /* Warna Oranye Khas Makanan */
+    --primary-color: #2563EB;   /* Biru (Tailwind Blue-600) */
     --secondary-color: #232323; /* Warna Hitam Modern */
 }
 
