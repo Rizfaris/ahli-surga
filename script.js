@@ -124,7 +124,7 @@ function checkout() {
     });
 
     let methodText = "";
-    if(method === "qris") methodText = "QRIS DANA";
+    if(method === "qris") methodText = "QRIS";
     if(method === "transfer") methodText = "Transfer Bank Manual";
     if(method === "cod") methodText = "Bayar di Tempat (COD)";
 
