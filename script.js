@@ -150,7 +150,7 @@ function checkout() {
         modalContent.innerHTML = `
             <p class="text-xs text-gray-600 mb-3">Silakan simpan/screenshot gambar QRIS di bawah ini, lalu bayar sejumlah <strong>Rp ${total.toLocaleString('id-ID')}</strong>.</p>
             <div class="border-2 border-dashed border-gray-300 p-2 rounded-lg bg-gray-50 flex justify-center items-center qr-container">
-                <img src="${FOTO_QRIS}" alt="QRIS" onerror="this.src='https://imgur.com/a/NWnvAn5'
+                <img src="${FOTO_QRIS}" alt="QRIS" onerror="this.src='https://imgur.com/gallery/qr-dana-HAVtsuc'
             <p class="text-[10px] text-gray-400 mt-2">Setelah bayar, wajib klik tombol hijau di bawah untuk mengirim detail pesanan ke WA.</p>
         `;
     } else if (method === 'transfer') {
