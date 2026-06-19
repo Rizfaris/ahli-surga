@@ -148,9 +148,9 @@ function checkout() {
     if (method === 'qris') {
         modalTitle.innerText = "Scan QRIS ";
         modalContent.innerHTML = `
-            <p class="text-xs text-gray-600 mb-3">Silakan simpan/screenshot gambar QRIS DANA di bawah ini, lalu bayar sejumlah <strong>Rp ${total.toLocaleString('id-ID')}</strong>.</p>
+            <p class="text-xs text-gray-600 mb-3">Silakan simpan/screenshot gambar QRIS di bawah ini, lalu bayar sejumlah <strong>Rp ${total.toLocaleString('id-ID')}</strong>.</p>
             <div class="border-2 border-dashed border-gray-300 p-2 rounded-lg bg-gray-50 flex justify-center items-center qr-container">
-                <img src="${FOTO_QRIS}" alt="QRIS DANA" onerror="this.src='https://imgur.com/a/D5kz35E'
+                <img src="${FOTO_QRIS}" alt="QRIS" onerror="this.src='https://imgur.com/a/D5kz35E'
             <p class="text-[10px] text-gray-400 mt-2">Setelah bayar, wajib klik tombol hijau di bawah untuk mengirim detail pesanan ke WA.</p>
         `;
     } else if (method === 'transfer') {
